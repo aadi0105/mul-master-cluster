@@ -1,0 +1,132 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv1
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/storage/data1"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv2
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/storage/data2"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv3
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data3"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv4
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data4"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv5
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data5"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv6
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data6"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv7
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data7"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv8
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data8"
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: local-pv9
+spec:
+  storageClassName: local-storage
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+      path: "/storage/data9"
+
