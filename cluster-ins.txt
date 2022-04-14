@@ -1,0 +1,13 @@
+ After running all the yaml files do these steps : 
+
+  1. First download jq in your system
+      
+       jq 1.5 is in the official Debian and Ubuntu repositories. Install using "sudo apt-get install jq".
+
+       jq 1.5 is in the official Fedora repository. Install using "sudo dnf install jq".
+
+  2. run commands
+       a. export REDIS_NODES=$(kubectl get pods  -l app=redis-cluster -n redis -o json | jq -r '.items | map(.status.podIP) | join(":6379 ")'):6379
+
+       b. kubectl exec -it redis-cluster-0 -n redis -- redis-cli --cluster create --cluster-replicas 1 ${REDIS_NODES}
+
