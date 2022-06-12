@@ -19,6 +19,7 @@ ips = get_ips()
 
 cmd = "kubectl exec -it redis-cluster-0  -- redis-cli  --cluster-replicas 2 --cluster create "
 for pod in ips:
-    cmd += ips[pod] + ":6379 "
+    if "redis-cluster" in pod:
+        cmd += ips[pod] + ":6379 "
 
 sb.run("echo 'yes' | "+ cmd, shell=True)
